@@ -2,7 +2,7 @@ pipeline {
     agent none
     
     environment {
-        ECR_URL = "992382545251.dkr.ecr.us-east-1.amazonaws.com/molcho-ecr/calculator-app"
+        ECR_URL = "992382545251.dkr.ecr.us-east-1.amazonaws.com/molcho-ecr"
         REGION  = "us-east-1"
     }
 
