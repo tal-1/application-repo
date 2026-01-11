@@ -77,7 +77,8 @@ pipeline {
                 script {
                     retry(5) {
                         sh "sleep 10"
-                    }   sh "curl --fail http://${PROD_IP}:80/health"
+                        sh "curl --fail http://${PROD_IP}:80/health"
+                    }
                 }
             }
         }
