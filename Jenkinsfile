@@ -58,7 +58,7 @@ pipeline {
             steps {
                 sshagent(['prod-ssh-key']) {
                     sh """
-                        ssh -o StrictHostKeyChecking=no ec2-user@${PROD_IP} "
+                        ssh -o StrictHostKeyChecking=no ubuntu@${PROD_IP} "
                             aws ecr get-login-password --region ${REGION} | docker login --username AWS --password-stdin ${ECR_URL} &&
                             docker pull ${ECR_URL}:latest &&
                             docker stop calculator || true &&
