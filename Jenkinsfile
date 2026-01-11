@@ -11,7 +11,7 @@ pipeline {
             agent { docker { image 'python:3.9-slim' } }
             steps {
                 script {
-                    sh "pip install -r requirements.txt"
+                    sh "pip install -r requirements.txt pytest"
                     sh "pytest tests/" 
                 }
             }
