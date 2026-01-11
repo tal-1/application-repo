@@ -12,7 +12,7 @@ pipeline {
             steps {
                 script {
                     sh "pip install -r requirements.txt pytest"
-                    sh "pytest tests/" 
+                    sh "export PYTHONPATH=$PYTHONPATH:. && pytest tests/" 
                 }
             }
         }
